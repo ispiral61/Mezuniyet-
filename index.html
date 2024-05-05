@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Çevre Koruyucuları</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">ANASAYFA</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">HAKKIMIZDA</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">NEDENİ-SONUÇLARI</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Önizleme bölümü -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Çevre Sorunları</h1>
+        <p class="home__subtitle">Küresel Isınma, İklim Değişikliği ve Sera Etkisi</p>
+      </section>
+      <!-- Hakkımda bölümü -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">HAKKIMIZDA</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Merhaba!Yenilenebilir enerji, küresel ısınma ve iklim değişikliğiyle mücadelede kritik bir rol oynamaktadır. Platformumuz, bu önemli konuları bir araya getirerek, yenilenebilir enerji kaynaklarını teşvik ederek ve iklim değişikliğiyle ilgili farkındalık yaratmaya yardımcı olarak küresel ısınmanın etkileriyle mücadelede toplumsal bir değişim sağlamayı amaçlamaktadır. Sürdürülebilir enerjiye yönelik bilgi ve kaynakları paylaşarak, insanları harekete geçirme konusunda güçlendiriyor ve iklim kriziyle başa çıkmak için birlikte çalışma çağrısında bulunuyoruz. Gezegenimizin sağlığı için yenilenebilir enerjiye olan geçişimiz, iklim değişikliğiyle mücadelede önemli bir adımdır.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/profile.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Beceriler bölümü -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">NEDENİ-SONUÇLARI</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Küresel Isınma</span>
+              <input class="skill__button" type="submit" name="button_python" value="PROJEYİ GÖSTER">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">İklim Değişikliği</span>
+              <input class="skill__button" type="submit" name="button_discord" value="PROJEYİ GÖSTER">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Yenilenebilir Enerji</span>
+              <input class="skill__button" type="submit" name="button_html" value="PROJEYİ GÖSTER">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/db.webp"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Net Sıfır Projesi</span>
+              <input class="skill__button" type="submit" name="button_db" value="KONUYUGÖSTER">
+            </li>
+          </ul>
+        </form>
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="https://www-un-org.translate.goog/en/un75/climate-crisis-race-we-can-win?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=en&_x_tr_pto=wapp">United Nations'da aç</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project2.png" alt="project" width="500">
+              <a class="project__link" href="https://www-un-org.translate.goog/en/climatechange/science/causes-effects-climate-change?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=en-US&_x_tr_pto=wapp">United Nations'da aç</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project3.png" alt="project" width="500">
+              <a class="project__link" href="https://www-un-org.translate.goog/en/climatechange/what-is-renewable-energy?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=en-US&_x_tr_pto=wapp">United Nations'da aç</a>
+          </div>
+        {% endif %}
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="https://www-un-org.translate.goog/en/climatechange/net-zero-coalition?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=en-US&_x_tr_pto=wapp">United Nations'da aç</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Geri bildirim formu -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">GERİ BİLDİRİM</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="E-posta Adresizi Girin" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Yorum"></textarea>
+          </label>
+          <button class="form__button" type="submit">GÖNDER</button>
+        </form>
+      </section>
+    </main>
+    <!-- Sosyal medya bağlantıları için bir alt bilgi -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
